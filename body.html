@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Livros</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="image.png">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">|Banco de Livros|</h1>
+        <div class="form-group">
+            <label>Nome do Livro:</label>
+            <textarea rows="3.5" cols="50" id="filename" placeholder="ex: A moeda de ouro"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Autor:</label>
+            <textarea rows="3.5" cols="50" id="author" placeholder="Seu nome"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Ano de Série do Livro:</label>
+            <div class="select-container">
+              <select id="meuSelect">
+                <option value="" disabled selected>Selecione uma opção...</option>
+                <option value="1">Infantil</option>
+                <option value="2">1° Ano</option>
+                <option value="3">2° Ano</option>
+                <option value="4">3° Ano</option>
+                <option value="5">4° Ano</option>
+                <option value="6">5° Ano</option>
+              </select>
+            </div>
+        </div>
+        <div class="botoes-container">
+          <button onclick="create()" class="btn_1">Criar Livro</button>
+          <button onclick="remove()" class="btn_2">Remover livro</button>
+        </div>
+
+        <div>
+          <label>Pesquisar Livro:</label> 
+          <input type="text" id="inputBusca" placeholder="Pesquise autor" oninput="filtrarLivros()">
+        </div>
+
+        <div class="arquivos" id="arquivos"></div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
